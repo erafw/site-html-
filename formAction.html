@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epic Transfer - Dados do Formulário</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Menu padrão -->
+  <header>
+    <nav id="main-menu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="form.html">Formulário</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="overlay">
+      <h1>Dados Recebidos</h1>
+      <p>Abaixo estão os dados que você enviou:</p>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <section id="data-display">
+      <h2>Dados do Usuário</h2>
+      <div id="dados">
+        <!-- Os dados serão exibidos aqui via JavaScript -->
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Epic Transfer Buenos Aires. Todos os direitos reservados.
+  </footer>
+  
+  <a href="https://wa.me/5491133135534" target="_blank" class="floating-whatsapp">WhatsApp</a>
+  
+  <script>
+    // Recupera os parâmetros da URL e exibe-os na tela
+    function exibirDados() {
+      const parametros = new URLSearchParams(window.location.search);
+      let html = '<ul>';
+      for (const [chave, valor] of parametros.entries()) {
+        html += `<li><strong>${chave}:</strong> ${valor}</li>`;
+      }
+      html += '</ul>';
+      document.getElementById('dados').innerHTML = html;
+    }
+    window.onload = exibirDados;
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epic Transfer Buenos Aires - Serviços</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Menu padrão para todas as páginas -->
+  <header>
+    <nav id="main-menu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="form.html">Formulário</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </nav>
+
+    <!-- Seção de destaque com a imagem de fundo e chamada para ação -->
+    <div class="overlay">
+      <h1>Epic Transfer Buenos Aires</h1>
+      <p>Conforto, segurança e atendimento 100% em português</p>
+      <a href="#services" class="cta-btn">Veja nossos serviços</a>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+
+    <!-- Serviços disponíveis -->
+    <section id="services">
+      <h2>Serviços Disponíveis</h2>
+      <ul class="services-list">
+        <li>
+          <span>Transfer aeroporto Ezeiza</span>
+          <span>R$ 200</span>
+          <button onclick="addToCart('Transfer aeroporto Ezeiza', 200)">Adicionar</button>
+        </li>
+        <li>
+          <span>Transfer aeroporto Aeroparque</span>
+          <span>R$ 100</span>
+          <button onclick="addToCart('Transfer aeroporto Aeroparque', 100)">Adicionar</button>
+        </li>
+        <li>
+          <span>City tour privativo</span>
+          <span>R$ 500</span>
+          <button onclick="addToCart('City tour privativo', 500)">Adicionar</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Carrinho de compras -->
+    <section id="cart">
+      <h3>Seu Carrinho</h3>
+      <ul id="cart-items">
+        <li>Nenhum item adicionado</li>
+      </ul>
+      <div id="cart-total">Total: R$ 0</div>
+    </section>
+
+    <!-- Seção de checkout -->
+    <section id="checkout">
+      <h2>Finalizar Compra</h2>
+      <form id="checkout-form" onsubmit="return handleCheckout(event)">
+        <label for="name">Nome Completo</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" name="phone" placeholder="+55 11 91234-5678" required />
+
+        <button type="submit">Enviar Pedido</button>
+      </form>
+      <div class="message" id="form-message"></div>
+    </section>
+
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Epic Transfer Buenos Aires. Todos os direitos reservados.
+  </footer>
+
+  <!-- Link flutuante para WhatsApp -->
+  <a href="https://wa.me/5491133135534" target="_blank" class="floating-whatsapp">WhatsApp</a>
+
+  <!-- Referência ao script externo -->
+  <script src="js/script.js"></script>
+</body>
+</html>
